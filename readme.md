@@ -16,18 +16,15 @@ with open("employee.json", "r", encoding='utf-8') as read_file:
     data = json.load(read_file)
 
 // initialise json object
+
 data = [{"name": "sarath","city":"chennai","department":"software","gender":"m"}, 
   {"name": "rani","city":"pune","department":"banking","gender":"f"},
   {"name": "威明","city":"delhi","department":"economy","gender":"f"},
   {"name": "पांचाल","city":"hyderabad","department":"marketing","gender":"m"}
  ]
 
-//convert json object to string
+convert json object to string
     json_string = json.dumps(data) 
-	
-	#, ensure_ascii=False)
-
-
 
 
 [{"name": "sarath","city":"chennai","department":"software","gender":"m"}, 
