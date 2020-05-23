@@ -25,7 +25,8 @@ data = [{"name": "sarath","city":"chennai","department":"software","gender":"m"}
  ]
 
 convert json object to string
-    json_string = json.dumps(data) 
+------------------------------
+json_string = json.dumps(data) 
 
 
 [{"name": "sarath","city":"chennai","department":"software","gender":"m"}, 
