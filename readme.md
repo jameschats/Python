@@ -10,13 +10,13 @@ Agenda
 
 
 
-
-// read json data from file
-
+ Read json data from file
+---------------------------
 with open("employee.json", "r", encoding='utf-8') as read_file:
     data = json.load(read_file)
 
-// initialise json object
+Initialise json object
+--------------------------
 
 data = [{"name": "sarath","city":"chennai","department":"software","gender":"m"}, 
   {"name": "rani","city":"pune","department":"banking","gender":"f"},
