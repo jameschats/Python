@@ -12,6 +12,7 @@ Agenda
 
 
 // read json data from file
+
 with open("employee.json", "r", encoding='utf-8') as read_file:
     data = json.load(read_file)
 
