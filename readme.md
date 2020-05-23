@@ -2,11 +2,11 @@ Topic - Python: Read JSON data and insert into SQL using PYODBC
 
 Agenda
 -------
-python - how to make sql connection using pyodbc
-call sql procedure to insert records to database (without parameters)
-read json object and pass json to sql procedure
-read json from json file and pass json to sql procedure
-how to pass unicode (chinese, hindi) characters from json to sql
+* python - how to make sql connection using pyodbc
+* call sql procedure to insert records to database (without parameters)
+* read json object and pass json to sql procedure
+* read json from json file and pass json to sql procedure
+* how to pass unicode (chinese, hindi) characters from json to sql
 
 
 
@@ -50,28 +50,3 @@ with open("employee.json", "r", encoding='utf-8') as read_file:
 
 
 
-ALTER Procedure prcInsertEmployees
-(@json VARCHAR(MAX) = '')
-AS
-BEGIN
-
-
-INSERT INTO tblEmployee 
-SELECT name, city, department, gender
-	FROM OPENJSON(@json)
-	WITH (
-		name NVARCHAR(50) '$.name',
-		city NVARCHAR(50) '$.city',
-		department NVARCHAR(50) '$.department',
-		gender VARCHAR(1) '$.gender'
-		)
-
-
---select * from tblemployee
---truncate table tblemployee
-
-
---INSERT INTO tblEmployee VALUES
---('Rahul','Bangalore','Cricket','M')
-
-END
